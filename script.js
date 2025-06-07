@@ -11,7 +11,10 @@ window.onload = function () {
     const isMobile = /android|iphone|ipad|ipod|mobile/i.test(userAgent);
   
     if (!isMobile) {
-      document.getElementById("h3-laptop").style.opacity = 1;
+        setTimeout(() => {
+            document.getElementById("laptop").style.opacity = 1;
+            document.getElementById("h3-laptop").style.opacity = 1;
+        }, 8000);
     }  
   };
   
