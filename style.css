@@ -58,10 +58,15 @@ body {
 
 
 .laptop {
-    height: 50px;
+    padding:0px 15px 30px 15px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: rgba(245, 245, 245, 0.359);
     opacity: 0;
+    color: #111;
 }
 #h3-laptop {
     font-size: 30px;
+    opacity: 0;
 }
 
