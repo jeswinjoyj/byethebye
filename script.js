@@ -10,7 +10,7 @@ window.onload = function () {
     const userAgent = navigator.userAgent.toLowerCase();
     const isMobile = /android|iphone|ipad|ipod|mobile/i.test(userAgent);
   
-    if (!isMobile) {
+    if (isMobile) {
         setTimeout(() => {
             document.getElementById("laptop").style.opacity = 1;
             document.getElementById("h3-laptop").style.opacity = 1;
