@@ -1,0 +1,67 @@
+body {
+  background: #111;
+  color: #fff;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hi-pookies, .say {
+    display: inline-block;
+}
+
+#h1-hi-pookies {
+    font-size: 150px;
+    border-right: 5px solid;
+    border-color: #e7e7e7;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: 
+        typing 2s steps(12),
+        cursor .3s step-end infinite alternate;
+}
+@keyframes cursor {
+    50% { border-color: transparent;
+        animation-duration: 2s;}
+}
+@keyframes typing {
+    from { width: 0%}
+}
+
+#h2-say {
+    opacity: 0;
+    border-right: 5px solid;
+    border-color: #e7e7e7;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 2px;
+    width: 100%;
+    animation:
+        fadeIn 1s ease forwards,
+        typing 2s steps(12),
+        cursor .4s step-end infinite alternate;
+    animation-delay: 4s;
+}
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+.laptop {
+    height: 50px;
+    opacity: 0;
+}
+#h3-laptop {
+    font-size: 30px;
+}
+
