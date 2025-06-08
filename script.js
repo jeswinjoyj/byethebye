@@ -1,11 +1,24 @@
 window.onload = function () {
+
+    setTimeout(() => {
+        document.getElementById("pookiContainer").style.borderColor = "transparent";
+      }, 5000);
+
+    setTimeout(() => {
+        document.getElementById("h1-hi-pookies").style.color = "#fff";
+      }, 5000);
+
+    setTimeout(() => {
+        document.getElementById("h1-hi-pookies").style.borderColor = "#e7e7e7";
+    }, 5000);
+    
     setTimeout(() => {
       document.getElementById("h1-hi-pookies").style.borderColor = "transparent";
-    }, 4000);
+    }, 9500);
   
     setTimeout(() => {
       document.getElementById("h2-say").style.borderColor = "transparent";
-    }, 9000);
+    }, 16500);
   
     const userAgent = navigator.userAgent.toLowerCase();
     const isMobile = /android|linux|mac|iphone|ipad|ipod|mobile/i.test(userAgent);
