@@ -18,23 +18,41 @@ body {
 
 #h1-hi-pookies {
     font-size: 150px;
-    border-right: 5px solid;
-    border-color: #e7e7e7;
+    border-right: 6px solid;
+    border-color: #111;
     width: 100%;
+    color: #111;
     white-space: nowrap;
     overflow: hidden;
     letter-spacing: 2px;
     animation: 
         typing 2s steps(12),
-        cursor .3s step-end infinite alternate;
+        cursor .4s step-end infinite alternate;
+    animation-delay: 5s;
 }
+#pookiContainer{
+    border-left: 6px solid;
+    animation: 
+        blinkLeftBorder .4s step-end 11 alternate; 
+}
+@keyframes blinkLeftBorder {
+    0%, 100% {
+      border-left-color: #fff;
+    }
+    50% {
+      border-left-color: transparent;
+    }
+}
+
 @keyframes cursor {
-    50% { border-color: transparent;
-        animation-duration: 2s;}
+    50% { border-color: transparent;      
+        }
 }
 @keyframes typing {
-    from { width: 0%}
+    from { width: 0%;
+    }
 }
+
 
 #h2-say {
     opacity: 0;
@@ -46,9 +64,10 @@ body {
     width: 100%;
     animation:
         fadeIn 1s ease forwards,
-        typing 2s steps(12),
+        typing 2s steps(25),
         cursor .4s step-end infinite alternate;
-    animation-delay: 4s;
+    animation-delay: 9.5s;
+    
 }
 @keyframes fadeIn {
     to {
