@@ -8,7 +8,7 @@ window.onload = function () {
     }, 9000);
   
     const userAgent = navigator.userAgent.toLowerCase();
-    const isMobile = /android|iphone|ipad|ipod|mobile/i.test(userAgent);
+    const isMobile = /android|linux|mac|iphone|ipad|ipod|mobile/i.test(userAgent);
   
     // Get the log <p> element
     const logElement = document.getElementById("log-output");
