@@ -18,7 +18,7 @@ window.onload = function () {
       logElement.innerHTML += `<strong>isMobile:</strong> ${isMobile}<br>`;
     }
   
-    if (!isMobile) {
+    if (isMobile) {
       setTimeout(() => {
         document.getElementById("laptop").style.opacity = 1;
         document.getElementById("h3-laptop").style.opacity = 1;
