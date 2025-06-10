@@ -5,11 +5,11 @@ window.onload = function () {
       }, 5000);
 
     setTimeout(() => {
-        document.getElementById("h1-hi-pookies").style.color = "#fff";
+        document.getElementById("h1-hi-pookies").style.color = "#f7f7ff";
       }, 5000);
 
     setTimeout(() => {
-        document.getElementById("h1-hi-pookies").style.borderColor = "#e7e7e7";
+        document.getElementById("h1-hi-pookies").style.borderColor = "#f7f7ff";
     }, 5000);
     
     setTimeout(() => {
@@ -40,9 +40,9 @@ window.onload = function () {
       const verify = document.getElementById("verify");
       verify.style.display = "flex";
 
-      if (isMobile) {
+      if (!isMobile) {
 
-          document.getElementById("message-container").style.display = "none";
+          document.getElementById("main-wrapper").style.display = "none";
 
             setTimeout(() => {
               document.getElementById("laptop").style.opacity = 1;
@@ -58,6 +58,7 @@ window.onload = function () {
 
         setTimeout(() => {
           document.getElementById("container").style.display = "none";
+          document.getElementById("main-wrapper").style.display = "block";
           document.getElementById("message-container").style.display = "flex";
         }, 5000);
 
@@ -66,20 +67,21 @@ window.onload = function () {
         }, 5500);
       
         setTimeout(() => {
-          document.getElementById("encryption-text").style.opacity = 1;
+          document.getElementById("encryption").style.opacity = 1;
         }, 6500);
 
         setTimeout(() => {
-          document.getElementById("secondB").style.opacity = 1;
-          document.getElementById("video-container").style.display = "flex";
+          document.getElementById("encryption-text").style.opacity = 1;
+        }, 8000);
+
+        setTimeout(() => {
+          document.getElementById("secondB").style.opacity = 1; 
         }, 7500);
 
       }
 
     });
-
-  };
-  
+//*************************************************************** */
 const finalText = "ഞാൻ നിങ്ങളെ സ്നേഹിക്കുന്നു കൂട്ടുകാരെ";
 const chars = "!@#$%^&*()_+{}[]<>?/\\|~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 const scrambleElement = document.getElementById("encryption-text");
@@ -112,6 +114,16 @@ function scrambleTextEffect(element, text, duration = 2000) {
 
 button.addEventListener("click", () => {
   scrambleTextEffect(scrambleElement, finalText, 3000); // 2 second animation
+  button.style.background = "#62ab65";
+  button.style.color ="#10002B";
+  
+  setTimeout(() => {
+          button.textContent = "Decrypted!!!";
+        }, 3000);
+  setTimeout(() => {
+          document.getElementById("video-container").style.display = "flex"; 
+          document.getElementById("scroll").style.opacity = 1;
+        }, 7000);
 });
 
 const iframe = document.getElementById("videoFrame");
@@ -123,3 +135,32 @@ const iframe = document.getElementById("videoFrame");
   document.getElementById("video-head-two").addEventListener("click", () => {
     iframe.src = "https://www.youtube.com/embed/cKZ_uoWVlvI?autoplay=1&mute=0";
   });
+
+document.getElementById("video-head-one").addEventListener("click",() => {
+  setTimeout(() => {
+          document.getElementById("video-head-two").style.display = "flex"; 
+          document.getElementById("video-head-one").style.display = "none";
+        }, 5000);
+});
+
+const videoHeadTwo = document.getElementById("video-head-two");
+videoHeadTwo.addEventListener("click",() => {
+  videoHeadTwo.style.background = "#F7F7FF";
+  videoHeadTwo.style.color = "#10002B";
+
+    setTimeout(() => {
+              document.getElementById("cringe-text").style.opacity = 1; 
+            }, 10000);
+
+    setTimeout(() => {
+              document.getElementById("sheri-text").style.opacity = 1; 
+            }, 12000);
+
+    setTimeout(() => {
+              document.getElementById("wave").style.opacity = 1; 
+            }, 13000);
+});
+
+  };
+  
+
