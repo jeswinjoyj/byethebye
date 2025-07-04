@@ -40,7 +40,7 @@ window.onload = function () {
     const verify = document.getElementById("verify");
     verify.style.display = "flex";
 
-    if (isMobile) {
+    if (!isMobile) {
 
       document.getElementById("main-wrapper").style.display = "none";
 
