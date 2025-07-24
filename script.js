@@ -59,73 +59,74 @@ window.onload = function () {
       setTimeout(() => {
         document.getElementById("container").style.display = "none";
         document.getElementById("main-wrapper").style.display = "block";
-        document.getElementById("message-container").style.display = "flex";
+        document.getElementById("video-container").style.display = "flex";
+        // document.getElementById("message-container").style.display = "flex";
       }, 5000);
 
-      setTimeout(() => {
-        document.getElementById("message-text").style.opacity = 1;
-      }, 5500);
+      // setTimeout(() => {
+      //   document.getElementById("message-text").style.opacity = 1;
+      // }, 5500);
 
-      setTimeout(() => {
-        document.getElementById("encryption").style.opacity = 1;
-      }, 6500);
+      // setTimeout(() => {
+      //   document.getElementById("encryption").style.opacity = 1;
+      // }, 6500);
 
-      setTimeout(() => {
-        document.getElementById("encryption-text").style.opacity = 1;
-      }, 8000);
+      // setTimeout(() => {
+      //   document.getElementById("encryption-text").style.opacity = 1;
+      // }, 8000);
 
-      setTimeout(() => {
-        document.getElementById("secondB").style.opacity = 1;
-      }, 7500);
+      // setTimeout(() => {
+      //   document.getElementById("secondB").style.opacity = 1;
+      // }, 7500);
 
     }
 
   });
   //*************************************************************** */
-  const finalText = "ഞാൻ നിങ്ങളെ സ്നേഹിക്കുന്നു കൂട്ടുകാരെ";
-  const chars = "!@#$%^&*()_+{}[]<>?/\\|~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-  const scrambleElement = document.getElementById("encryption-text");
-  const button = document.getElementById("secondB");
+  // const finalText = "ഞാൻ നിങ്ങളെ സ്നേഹിക്കുന്നു കൂട്ടുകാരെ";
+  // const chars = "!@#$%^&*()_+{}[]<>?/\\|~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+  // const scrambleElement = document.getElementById("encryption-text");
+  // const button = document.getElementById("secondB");
 
-  function scrambleTextEffect(element, text, duration = 2000) {
-    const length = text.length;
-    const frameRate = 30; // ms per frame
-    const totalFrames = Math.floor(duration / frameRate);
-    let frame = 0;
+  // function scrambleTextEffect(element, text, duration = 2000) {
+  //   const length = text.length;
+  //   const frameRate = 30; // ms per frame
+  //   const totalFrames = Math.floor(duration / frameRate);
+  //   let frame = 0;
 
-    const interval = setInterval(() => {
-      let display = '';
-      for (let i = 0; i < length; i++) {
-        if (frame / totalFrames > i / length) {
-          display += text[i];
-        } else {
-          display += chars[Math.floor(Math.random() * chars.length)];
-        }
-      }
-      element.textContent = display;
+  //   const interval = setInterval(() => {
+  //     let display = '';
+  //     for (let i = 0; i < length; i++) {
+  //       if (frame / totalFrames > i / length) {
+  //         display += text[i];
+  //       } else {
+  //         display += chars[Math.floor(Math.random() * chars.length)];
+  //       }
+  //     }
+  //     element.textContent = display;
 
-      if (frame >= totalFrames) {
-        clearInterval(interval);
-        element.textContent = text; // ensure exact final text
-      }
-      frame++;
-    }, frameRate);
-  }
+  //     if (frame >= totalFrames) {
+  //       clearInterval(interval);
+  //       element.textContent = text; // ensure exact final text
+  //     }
+  //     frame++;
+  //   }, frameRate);
+  // }
 
-  button.addEventListener("click", () => {
-    scrambleTextEffect(scrambleElement, finalText, 3000); // 2 second animation
-    button.style.background = "#62ab65";
-    button.style.color = "#0a001e";
-    button.style.animation = "none";
+  // button.addEventListener("click", () => {
+  //   scrambleTextEffect(scrambleElement, finalText, 3000); // 2 second animation
+  //   button.style.background = "#62ab65";
+  //   button.style.color = "#0a001e";
+  //   button.style.animation = "none";
 
-    setTimeout(() => {
-      button.textContent = "Decrypted!!!";
-    }, 3000);
-    setTimeout(() => {
-      document.getElementById("video-container").style.display = "flex";
-      document.getElementById("scroll").style.opacity = 1;
-    }, 7000);
-  });
+  //   setTimeout(() => {
+  //     button.textContent = "Decrypted!!!";
+  //   }, 3000);
+  //   setTimeout(() => {
+  //     document.getElementById("video-container").style.display = "flex";
+  //     document.getElementById("scroll").style.opacity = 1;
+  //   }, 7000);
+  // });
 
   const iframe = document.getElementById("videoFrame");
 
@@ -138,8 +139,8 @@ window.onload = function () {
   });
 
   document.getElementById("video-head-one").addEventListener("click", () => {
-  document.getElementById("video-head-one").style.opacity = 0;
-  document.getElementById("video-head-one").style.zIndex = 0;
+    document.getElementById("video-head-one").style.opacity = 0;
+    document.getElementById("video-head-one").style.zIndex = 0;
     setTimeout(() => {
       document.getElementById("video-head-two").style.opacity = 1;
     }, 5000);
@@ -165,5 +166,3 @@ window.onload = function () {
   });
 
 };
-
-
