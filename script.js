@@ -135,7 +135,7 @@ window.onload = function () {
   });
 
   document.getElementById("video-head-two").addEventListener("click", () => {
-    iframe.src = "https://www.youtube.com/embed/cKZ_uoWVlvI?autoplay=1&mute=0";
+    iframe.src = "https://www.youtube.com/embed/R1Q1L92dBgA?autoplay=1&mute=0";
   });
 
   document.getElementById("video-head-one").addEventListener("click", () => {
@@ -154,15 +154,15 @@ window.onload = function () {
 
     setTimeout(() => {
       document.getElementById("cringe-text").style.opacity = 1;
-    }, 10000);
+    }, 3000);
 
     setTimeout(() => {
       document.getElementById("sheri-text").style.opacity = 1;
-    }, 12000);
+    }, 3500);
 
     setTimeout(() => {
       document.getElementById("wave").style.opacity = 1;
-    }, 13000);
+    }, 4000);
   });
 
 };
